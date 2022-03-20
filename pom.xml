@@ -5,6 +5,8 @@
     <modules>
         <module>boot-quickstart</module>
         <module>boot-restful</module>
+        <module>boot-config</module>
+        <module>boot-orm</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -39,6 +41,8 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+
     </dependencies>
 
     <build>

@@ -1,0 +1,7 @@
+user:
+  name: "YG"
+  age: 28
+  book:
+    name: "Spring Boot"
+    price: 11
+    createTime: 2021-01-01 12:12:12
