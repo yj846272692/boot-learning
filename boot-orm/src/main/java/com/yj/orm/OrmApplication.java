@@ -1,18 +1,18 @@
 package com.yj.orm;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @program: boot-learning
- * @description:
- * @author: YJ
- * @create: 2022-03-18
- **/
-
+ * @author YangJING
+ */
 @SpringBootApplication
-public class Application {
+@MapperScan(basePackages = {"com.yj.orm.mapper"})
+public class OrmApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(OrmApplication.class, args);
     }
+
 }
