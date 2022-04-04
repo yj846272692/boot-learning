@@ -25,6 +25,6 @@ class CourseMapperTest {
     void getCourse() {
         Course course = courseMapper.getCourse(20001);
         log.info(course.getCourseId()+" "+course.getCourseName());
-        course.getStudents().forEach(student -> log.info(String.valueOf(student)));
+        course.getStudentList().forEach(student -> log.info(String.valueOf(student)));
     }
 }

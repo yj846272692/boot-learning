@@ -7,7 +7,7 @@
     <resultMap id="courseType" type="Course">
         <id column="course_id" property="courseId"/>
         <result column="course_name" property="courseName"/>
-        <collection property="students" ofType="Student">
+        <collection property="studentList" ofType="Student">
             <id column="student_id" property="studentId"/>
             <result column="student_name" property="studentName"/>
             <result column="hometown" property="hometown"/>

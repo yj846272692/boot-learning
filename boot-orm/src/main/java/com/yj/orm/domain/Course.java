@@ -26,7 +26,7 @@ public class Course implements Serializable {
     /**
      * 关联查询：查询课程时，关联查询出该课程的所有学生
      */
-    private List<Student> students;
+    private List<Student> studentList;
 
     private static final long serialVersionUID = 1L;
 }

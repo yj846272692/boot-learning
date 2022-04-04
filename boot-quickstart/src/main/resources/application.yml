@@ -1,2 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.14.168.40:3306/soft2176_orm?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: Ssy@2021
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database: mysql
+    show-sql: true
+
 server:
-  port: 8888
+  port: 8071

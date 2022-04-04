@@ -4,9 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>boot-quickstart</module>
-        <module>boot-restful</module>
         <module>boot-config</module>
         <module>boot-orm</module>
+        <module>boot-multi-datasource</module>
+        <module>boot-restful</module>
+        <module>boot-resources-template</module>
+        <module>boot-filter-interceptor</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -41,6 +44,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springdoc</groupId>-->
+<!--            <artifactId>springdoc-openapi-common</artifactId>-->
+<!--            <version>1.6.6</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
 
 
     </dependencies>
