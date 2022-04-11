@@ -1,0 +1,12 @@
+2022-04-11 20:16:30.496 [main] INFO  com.yj.boot.LogApplication - Starting LogApplication using Java 17.0.2 on YangJING with PID 23076 (D:\soft2176\Work\boot-learning\boot-log-framework\target\classes started by YangJING in D:\soft2176\Work\boot-learning)
+2022-04-11 20:16:30.804 [main] INFO  com.yj.boot.LogApplication - No active profile set, falling back to 1 default profile: "default"
+2022-04-11 20:16:32.131 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-04-11 20:16:32.366 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1474 ms
+2022-04-11 20:16:33.119 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-11 20:16:33.846 [main] INFO  com.yj.boot.LogApplication - Started LogApplication in 4.213 seconds (JVM running for 5.364)
+2022-04-11 20:16:43.949 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-04-11 20:16:44.133 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-04-11 20:16:44.201 [http-nio-8080-exec-3] DEBUG com.yj.boot.controller.LogTestController - debug日志
+2022-04-11 20:16:44.242 [http-nio-8080-exec-3] INFO  com.yj.boot.controller.LogTestController - info日志
+2022-04-11 20:16:44.309 [http-nio-8080-exec-3] WARN  com.yj.boot.controller.LogTestController - warn日志
+2022-04-11 20:16:44.378 [http-nio-8080-exec-3] ERROR com.yj.boot.controller.LogTestController - error日志

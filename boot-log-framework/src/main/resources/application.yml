@@ -1,0 +1,19 @@
+#logging:
+#  level: {
+#    com.yj.boot.controller: trace
+#  }
+
+logging:
+  level:
+    root: info
+    com.yj.boot.controller: debug
+#  file:
+#    path: D:\boot-log
+#    name: D:\boot-log\boot-logs.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 7
+  pattern:
+    console: '%red(%d{yyyy-MM-dd HH:mm:ss}) %blue([%thread]) %highlight(%-5level) %boldMagenta(%logger{10}) - %cyan(%msg%n)'
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger : %msg%n'
