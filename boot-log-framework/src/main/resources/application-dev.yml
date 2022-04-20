@@ -1,8 +1,8 @@
 server:
   port: 8081
 
-#logging:
-#  config: classpath:log4j2-dev.xml
+logging:
+  config: classpath:log4j2-dev.xml
 #logging:
 #  level:
 #    root: info

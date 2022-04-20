@@ -1,0 +1,14 @@
+file:
+  upload-path: D:/soft2176/upload/
+
+spring:
+  web:
+    resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+
+
+ # MinIo文件服务器
+minio:
+  endPoint: http://120.78.125.171:9000
+  accessKey: admin
+  secretKey: admin123

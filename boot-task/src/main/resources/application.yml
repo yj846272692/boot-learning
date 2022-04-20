@@ -1,0 +1,37 @@
+spring:
+  task:
+    execution:
+      pool:
+        core-size: 8 #核心线程数
+        max-size: 16 #最大线程数
+        keep-live: 60s #空闲线程存活时间
+        allow-core-thread-timeout: true
+        queue-capacity: 100 # 线程队列数量
+        thread-name-prefix: task- #线程名称前缀
+      shutdown:
+        await-termination: false # 线程等待关闭
+        await-termination-period: 60
+
+  mail:
+    host: smtp.qq.com
+    username: 846272692@qq.com
+    password: jjhbimzhwjhgbfje
+    protocol: smtp
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.port: 465
+    properties.mail.display.sendmail: Javen
+    properties.mail.display.sendname: Spring Boot  Email
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    default-encoding: utf-8
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
+  quartz:
+    job-store-type: JDBC #数据库存储quartz任务配置
+    jdbc:
+      initialize-schema: ALWAYS #⾃动初始化表结构，第⼀次启动的时候这⾥写always

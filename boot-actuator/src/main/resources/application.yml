@@ -1,0 +1,25 @@
+#management:
+#  endpoint:
+#    health:
+#      show-details: ALWAYS
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info,beans,env,customEndpoint
+#        exclude: info
+
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8081
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>websocket页面</title>
+</head>
+<body>
+<div id="app">
+    <div v-if="connect">
+        <figure class="hover-rotate" @click="open">
+            <img src="https://soft2176-yj.oss-cn-hangzhou.aliyuncs.com/image/153.jpg"/>
+        </figure>
+    </div>
+    <div>
+        <h3 v-if="show">
+            <div class="ripple-loader">
+                <div></div>
+                <div></div>
+            </div>
+        </h3>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data() {
+            return {
+                ws: null,
+                content: "",
+                message: "",
+                nickname: "",
+                show: false,
+                connect: true,
+            }
+        },
+        methods: {
+            open() {
+                // if(this.nickname === ""){
+                //     alert("昵称不能为空");
+                //     return;
+                // }
+                // ws = new WebSocket(`ws://localhost:8888/websocket?nickname=${this.nickname}`);
+                ws = new WebSocket(`ws://localhost:8888/websocket/1`);
+                ws.onopen = () => {
+                    // console.log("websocket已连接");
+                    swal("websocket已连接");
+                    this.connect = false;
+                    this.show = true;
+
+
+                }
+                ws.onclose = () => {
+                    console.log("websocket已关闭");
+                },
+                    ws.onerror = () => {
+                        console.log("websocket出现异常");
+                    },
+
+                    ws.onmessage = (msg) => {
+                        // swal(msg.data);
+                        swal("提示", msg.data, "info");
+                        // this.message = this.message.concat(msg.data);
+                    }
+            },
+            sendMsg() {
+                ws.send(this.content);
+                // console.log("发送成功");
+                this.content = ""
+            },
+        }
+    })
+</script>
+
+</body>
+</html>
+<style>
+    .hover-rotate {
+        margin: 300px ;
+        overflow: hidden;
+        width: 400px;
+        height: 300px;
+        border-radius: 10%;
+    }
+
+    .hover-rotate img {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        max-width: 100%;
+
+    }
+
+    .hover-rotate:hover img {
+        transform: scale(1.3) rotate(5deg);
+    }
+
+    body {
+        background-color: #8eccf5;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ripple-loader {
+        position: relative;
+        width: 128px;
+        height: 128px;
+    }
+
+    .ripple-loader div {
+        position: absolute;
+        border: 4px solid #454ADE;
+        border-radius: 50%;
+        animation: ripple-loader 1s ease-out infinite;
+    }
+
+    .ripple-loader div:nth-child(2) {
+        animation-delay: -1s;
+    }
+
+    @keyframes ripple-loader {
+        0% {
+            top: 64px;
+            left: 64px;
+            width: 0;
+            height: 0;
+            opacity: 1;
+        }
+
+        100% {
+            top: 0;
+            left: 0;
+            width: 128px;
+            height: 128px;
+            opacity: 0;
+        }
+    }
+</style>

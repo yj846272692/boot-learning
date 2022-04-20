@@ -13,6 +13,13 @@
         <module>boot-embed-server</module>
         <module>boot-exception</module>
         <module>boot-log-framework</module>
+        <module>boot-task</module>
+        <module>boot-file</module>
+        <module>boot-fastdfs</module>
+        <module>boot-actuator</module>
+        <module>boot-admin</module>
+        <module>boot-redis</module>
+        <module>boot-websocket</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
