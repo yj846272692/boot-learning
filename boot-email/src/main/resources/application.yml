@@ -1,7 +1,7 @@
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
+    url: jdbc:mysql://127.0.0.1:3306/spring_boot?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
     username: root
     password: root
   quartz:
@@ -31,7 +31,7 @@ spring:
   mail:
     host: smtp.qq.com
     username: 846272692@qq.com
-    password: kaqidswbuszwbdaj
+    password: ftfpfqptfvyzbchh
     protocol: smtp
     properties.mail.smtp.auth: true
     properties.mail.smtp.port: 465 #465或者994

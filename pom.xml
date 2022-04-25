@@ -20,6 +20,7 @@
         <module>boot-admin</module>
         <module>boot-redis</module>
         <module>boot-websocket</module>
+        <module>boot-email</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -14,6 +14,6 @@ import java.util.Date;
 public class QuartzSimpleTask extends QuartzJobBean {
     @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
-        System.out.println("quartz简单的定时任务执行时间：" + new Date());
+//        System.out.println("quartz简单的定时任务执行时间：" + new Date());
     }
 }
